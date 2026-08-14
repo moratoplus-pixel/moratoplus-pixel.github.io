@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MyFF</title>
+<meta name="description" content="好きなものを2つの軸に置いて、自己紹介にする">
+<script>
+  /* ===== ここだけ書き換える ===== */
+  var PLAY_URL = "https://play.google.com/store/apps/details?id=com.moratoplus.myff";
+  /* ============================ */
+  location.replace(PLAY_URL);
+</script>
+<noscript><meta http-equiv="refresh" content="0; url=https://play.google.com/store/apps/details?id=com.moratoplus.myff"></noscript>
+<style>
+body{margin:0;background:#0E1017;color:#8C93A8;
+  font-family:"Hiragino Sans","Yu Gothic","Noto Sans JP",system-ui,sans-serif;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  min-height:100vh;gap:10px;text-align:center;padding:20px}
+.mark{font-size:34px;font-weight:800;letter-spacing:-.04em;
+  background:linear-gradient(135deg,#FF5C8A,#FF6B4A 45%,#F2C14E);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+a{color:#FF6B4A;font-size:14px}
+p{font-size:13px;margin:0}
+</style>
+</head>
+<body>
+  <div class="mark">MyFF</div>
+  <p>Google Play に移動しています…</p>
+  <a id="fallback" href="https://play.google.com/store/apps/details?id=com.moratoplus.myff">移動しない場合はこちら</a>
+  <script>document.getElementById("fallback").href=PLAY_URL;</script>
+</body>
+</html>
