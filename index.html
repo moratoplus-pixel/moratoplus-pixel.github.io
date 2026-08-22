@@ -1,33 +1,162 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MyFF</title>
-<meta name="description" content="好きなものを2つの軸に置いて、自己紹介にする">
-<script>
-  /* ===== ここだけ書き換える ===== */
-  var PLAY_URL = "https://play.google.com/store/apps/details?id=com.moratoplus.myff";
-  /* ============================ */
-  location.replace(PLAY_URL);
-</script>
-<noscript><meta http-equiv="refresh" content="0; url=https://play.google.com/store/apps/details?id=com.moratoplus.myff"></noscript>
+<title>MoratoPlus</title>
+<meta name="description" content="MoratoPlus は、スマートフォンアプリ・PCゲーム・Webの開発を行う個人事業です。">
+
+<!-- ▼ Search Console の「HTMLタグ」認証を使う場合、ここに貼り付けてください -->
+<!-- <meta name="google-site-verification" content="ここに認証コード" /> -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+
 <style>
-body{margin:0;background:#0E1017;color:#8C93A8;
-  font-family:"Hiragino Sans","Yu Gothic","Noto Sans JP",system-ui,sans-serif;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  min-height:100vh;gap:10px;text-align:center;padding:20px}
-.mark{font-size:34px;font-weight:800;letter-spacing:-.04em;
-  background:linear-gradient(135deg,#FF5C8A,#FF6B4A 45%,#F2C14E);
-  -webkit-background-clip:text;background-clip:text;color:transparent}
-a{color:#FF6B4A;font-size:14px}
-p{font-size:13px;margin:0}
+  :root{
+    --paper:#F4F6F4;
+    --ink:#16262B;
+    --muted:#66787D;
+    --rule:#D9E0DC;
+    --mark:#2F6F6B;
+    --signal:#C2571F;
+    --mono:"JetBrains Mono",ui-monospace,monospace;
+    --sans:"Zen Kaku Gothic New",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    line-height:1.85;
+    font-size:16px;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px}
+
+  /* ── header ── */
+  header{padding:64px 0 0}
+  .mark{
+    font-family:var(--mono);
+    font-weight:600;
+    font-size:clamp(28px,6vw,40px);
+    letter-spacing:-.02em;
+    margin:0;
+  }
+  .mark span{color:var(--mark)}
+  .tagline{
+    color:var(--muted);
+    margin:10px 0 0;
+    font-size:15px;
+  }
+
+  /* ── sections ── */
+  section{padding:56px 0;border-top:1px solid var(--rule)}
+  section:first-of-type{margin-top:48px}
+  h2{
+    font-family:var(--mono);
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:.14em;
+    color:var(--muted);
+    text-transform:uppercase;
+    margin:0 0 22px;
+  }
+  h3{font-size:17px;margin:0 0 4px;font-weight:700}
+  p{margin:0 0 14px}
+  p:last-child{margin-bottom:0}
+
+  .app{margin:0 0 30px}
+  .app:last-child{margin-bottom:0}
+  .status{
+    font-family:var(--mono);
+    font-size:10px;
+    letter-spacing:.08em;
+    color:var(--signal);
+    display:block;
+    margin-bottom:2px;
+  }
+  .app p{color:var(--muted);font-size:15px}
+
+  dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:10px 28px;font-size:15px}
+  dt{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.06em;padding-top:6px}
+  dd{margin:0}
+
+  a{color:var(--mark);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+  a:hover{color:var(--signal)}
+  a:focus-visible{outline:2px solid var(--signal);outline-offset:3px;border-radius:2px}
+
+  footer{
+    border-top:1px solid var(--rule);
+    padding:28px 0 64px;
+    font-family:var(--mono);
+    font-size:11px;
+    color:var(--muted);
+    letter-spacing:.04em;
+  }
+
+  @media (max-width:520px){
+    dl{grid-template-columns:1fr;gap:2px 0}
+    dt{padding-top:12px}
+  }
 </style>
 </head>
 <body>
-  <div class="mark">MyFF</div>
-  <p>Google Play に移動しています…</p>
-  <a id="fallback" href="https://play.google.com/store/apps/details?id=com.moratoplus.myff">移動しない場合はこちら</a>
-  <script>document.getElementById("fallback").href=PLAY_URL;</script>
+<div class="wrap">
+
+  <header>
+    <h1 class="mark">Morato<span>Plus</span></h1>
+    <p class="tagline">スマートフォンアプリ・PCゲーム・Web の開発</p>
+  </header>
+
+  <section id="apps">
+    <h2>Apps</h2>
+
+    <div class="app">
+      <span class="status">公開準備中</span>
+      <h3>MyFF</h3>
+      <p>好きなものを2軸のチャートに並べて可視化し、QRコードで共有できる Android アプリ。</p>
+    </div>
+
+    <div class="app">
+      <span class="status">開発中</span>
+      <h3>日本旅行マップ</h3>
+      <p>47都道府県の観光地をチェックインして記録する、旅行の達成記録アプリ。</p>
+    </div>
+
+    <div class="app">
+      <span class="status">設計中</span>
+      <h3>ミニアプリランチャー</h3>
+      <p>手元で書いた HTML / JavaScript を、そのままスマートフォン上で動かせる実行環境。</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>Information</h2>
+    <dl>
+      <dt>屋号</dt>
+      <dd>MoratoPlus</dd>
+
+      <dt>所在地</dt>
+      <dd>〒000-0000 京都府京都市○○区222 第3京都ビル101</dd>
+
+      <dt>連絡先</dt>
+      <dd><a href="mailto:moratoplus@gmail.com">moratoplus@gmail.com</a></dd>
+
+      <dt>事業内容</dt>
+      <dd>スマートフォンアプリ・PCゲーム・Webサイトの開発および販売</dd>
+
+      <dt>プライバシー</dt>
+      <dd><a href="privacy-policy.html">プライバシーポリシー</a></dd>
+    </dl>
+  </section>
+
+  <footer>
+    © 2026 MoratoPlus
+  </footer>
+
+</div>
 </body>
 </html>
