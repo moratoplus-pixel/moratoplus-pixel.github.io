@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>プライバシーポリシー - MyFF | MoratoPlus</title>
+<meta name="description" content="MyFF のプライバシーポリシーです。">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --paper:#F4F6F4;
+    --ink:#16262B;
+    --muted:#66787D;
+    --rule:#D9E0DC;
+    --mark:#2F6F6B;
+    --signal:#C2571F;
+    --mono:"JetBrains Mono",ui-monospace,monospace;
+    --sans:"Zen Kaku Gothic New",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:var(--sans);line-height:1.9;font-size:16px;
+  }
+  .wrap{max-width:680px;margin:0 auto;padding:0 24px}
+
+  header{padding:56px 0 32px;border-bottom:1px solid var(--rule)}
+  .back{
+    font-family:var(--mono);font-size:11px;letter-spacing:.08em;
+    display:inline-block;margin-bottom:20px;
+  }
+  .app-name{
+    font-family:var(--mono);font-size:12px;font-weight:600;
+    letter-spacing:.1em;color:var(--mark);margin:0 0 4px;
+  }
+  h1{font-size:clamp(22px,5vw,28px);margin:0 0 6px;font-weight:700}
+  .updated{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.06em}
+
+  section{padding:36px 0;border-bottom:1px solid var(--rule)}
+  h2{
+    font-family:var(--mono);font-size:11px;font-weight:600;
+    letter-spacing:.12em;color:var(--muted);text-transform:uppercase;
+    margin:0 0 16px;
+  }
+  h3{font-size:16px;margin:24px 0 6px;font-weight:700}
+  h3:first-of-type{margin-top:0}
+  p{margin:0 0 14px}
+  p:last-child{margin-bottom:0}
+  ul{margin:0 0 14px;padding-left:1.2em}
+  li{margin-bottom:6px}
+
+  .note{
+    border-left:2px solid var(--mark);
+    padding:2px 0 2px 18px;
+    color:var(--muted);
+    font-size:15px;
+  }
+
+  a{color:var(--mark);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+  a:hover{color:var(--signal)}
+  a:focus-visible{outline:2px solid var(--signal);outline-offset:3px;border-radius:2px}
+
+  footer{
+    padding:28px 0 64px;font-family:var(--mono);
+    font-size:11px;color:var(--muted);letter-spacing:.04em;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <a class="back" href="index.html">&larr; MoratoPlus</a>
+    <p class="app-name">MyFF</p>
+    <h1>プライバシーポリシー</h1>
+    <p class="updated">最終更新日 2026-08-19</p>
+  </header>
+
+  <section>
+    <h2>Summary</h2>
+    <p>MoratoPlus（以下「当方」）は、アプリケーション「MyFF」（以下「本アプリ」）における利用者情報の取り扱いについて、以下のとおり定めます。</p>
+    <p class="note">本アプリは、個人情報を一切収集しません。作成したデータはすべて利用者の端末内にのみ保存され、当方や第三者のサーバーへ送信されることはありません。広告の配信、および利用状況の分析も行いません。</p>
+  </section>
+
+  <section>
+    <h2>Data</h2>
+
+    <h3>本アプリ内で作成するデータ</h3>
+    <p>チャートの内容、項目名、配置、テンプレート、各種設定などは、利用者の端末内にのみ保存されます。当方がこれらを閲覧・取得することはありません。</p>
+    <p>本アプリをアンインストールすると、これらのデータも端末から削除されます。当方にバックアップは存在しないため、削除されたデータを復元することはできません。</p>
+
+    <h3>収集しない情報</h3>
+    <p>本アプリは、以下の情報を取得しません。</p>
+    <ul>
+      <li>氏名、メールアドレス等の個人を特定できる情報</li>
+      <li>位置情報</li>
+      <li>連絡先、通話履歴、SMS</li>
+      <li>広告識別子（Advertising ID）</li>
+      <li>アプリの利用状況、操作ログ、クラッシュ情報</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Sharing</h2>
+    <p>本アプリには、作成したチャートを他の利用者と共有する機能があります。共有は、チャートの内容そのものを文字列に変換した「共有コード」を受け渡すことで行われます。</p>
+    <p>共有コードは URL の形式をとりますが、これは文字列の書式にすぎません。チャートのデータはコード自体に含まれており、共有にあたって当方のサーバーへ保存・送信されることはありません。</p>
+    <p>他の利用者から受け取ったコードを本アプリに入力すると、その内容が端末内で復元され、ページとして追加されます。この処理も端末内で完結します。</p>
+    <p class="note">共有コードや、コードを含む QR コードを他者に渡した場合、その内容は受け取った相手が閲覧できます。共有する範囲は、利用者ご自身の判断でご確認ください。</p>
+  </section>
+
+  <section>
+    <h2>Export</h2>
+    <p>本アプリには、作成したチャートを画像として書き出す機能があります。書き出した画像は利用者の端末内に保存されるほか、利用者の操作により他のアプリへ共有できます。</p>
+    <p>画像の生成および保存は端末内で完結し、当方が画像を取得することはありません。他のアプリへ共有した後の取り扱いについては、共有先の各サービスの規約およびプライバシーポリシーが適用されます。</p>
+  </section>
+
+  <section>
+    <h2>Permissions</h2>
+    <p>本アプリは、画像を端末に保存する際に、ストレージへのアクセス許可を求める場合があります。この許可は画像の保存にのみ使用し、端末内の他のファイルを読み取ることはありません。</p>
+    <p>許可を与えなくても、画像の保存以外の機能はすべてご利用いただけます。許可は端末の設定からいつでも変更できます。</p>
+  </section>
+
+  <section>
+    <h2>Third parties</h2>
+    <p>本アプリは、広告配信サービスおよびアクセス解析ツールを利用していません。</p>
+    <p>当方は、利用者の情報を第三者に提供しません。そもそも提供しうる情報を保持していません。</p>
+  </section>
+
+  <section>
+    <h2>Children</h2>
+    <p>本アプリは、13歳未満の児童を対象として設計されていません。前述のとおり本アプリは個人情報を収集しないため、当方が児童から個人情報を取得することはありません。</p>
+  </section>
+
+  <section>
+    <h2>Changes</h2>
+    <p>本ポリシーの内容は、本アプリの機能追加等に伴い変更されることがあります。変更後の内容は、本ページに掲載した時点から適用されます。重要な変更を行う場合は、本アプリ内またはストアの掲載情報にてお知らせします。</p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>本ポリシーおよび本アプリに関するお問い合わせは、以下までご連絡ください。</p>
+    <p>
+      MoratoPlus<br>
+      <a href="mailto:moratoplus@gmail.com">moratoplus@gmail.com</a>
+    </p>
+  </section>
+
+  <footer>
+    © 2026 MoratoPlus
+  </footer>
+
+</div>
+</body>
+</html>
